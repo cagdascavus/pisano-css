@@ -1,0 +1,24 @@
+/* Pisano anket arka plan görseli */
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Anket içeriğinin okunabilir olması için beyaz overlay */
+#pisano-container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  z-index: 0;
+}
+
+/* Anket içeriğini üste al */
+#pisano-container {
+  position: relative;
+  z-index: 1;
+}
