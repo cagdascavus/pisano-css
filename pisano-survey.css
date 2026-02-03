@@ -15,7 +15,6 @@ body {
   inset: 1;
   background: rgba(255, 255, 255, 0.88);
   z-index: 0;
-backdrop-filter: blur(6px);
 }
 
 /* Anket içeriğini üste al */
