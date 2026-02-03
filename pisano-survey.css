@@ -1,24 +1,23 @@
 /* Pisano anket arka plan görseli */
 
-body {
-  background-image: url(https://unsplash.com/photos/red-tram-on-the-street-during-daytime-a9bLObiMPJ4);
+#pisano-container {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+
+  /* içerik ortalaması bozulmasın diye */
+  display: flex;
+  justify-content: center;
 }
 
-/* Anket içeriğinin okunabilir olması için beyaz overlay */
-#pisano-container::before {
-  content: "";
-  position: fixed;
-  inset: 1;
-  background: rgba(255, 255, 255, 0.88);
-  z-index: 0;
-}
-
-/* Anket içeriğini üste al */
-#pisano-container {
-  position: relative;
-  z-index: 1;
+/* Okunabilirlik için içeriğe yarı saydam zemin */
+#pisano-container > * {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 820px;
+  width: 100%;
+  margin: 40px 16px;
 }
